@@ -7,6 +7,9 @@ const NoticeSchema=new mongoose.Schema({
     description:{
         type:String,
         required:true
+    },
+    date:{
+        type:String
     }
 });
 

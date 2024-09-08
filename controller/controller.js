@@ -10,7 +10,8 @@ const sendnotice=async (req,res)=>{
         const {title, description}=req.body;
         const notice=new NoticeSchema({
             title,
-            description
+            description,
+            date: new Date().toLocaleDateString()
         });
         await notice.save();
         res.status(201).json({message: 'Notice sent successfully'});
